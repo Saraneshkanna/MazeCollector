@@ -15,7 +15,9 @@ public class MoveBall : MonoBehaviour
     public Vector3 Velocity;
 
     [SerializeField] private Transform cameraTransform;
-// Start is called before the first frame update
+    [SerializeField] private AudioSource jumpSound;
+    [SerializeField] private AudioSource collectSound;
+    // Start is called before the first frame update
     void Start()
     {
         Controller = GetComponent<CharacterController>(); 
@@ -46,6 +48,7 @@ public class MoveBall : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 yVelocity += JumpSpeed;
+                jumpSound.Play();
             }
         }
         else
@@ -54,6 +57,13 @@ public class MoveBall : MonoBehaviour
 
         }
         
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.tag == "Collectible")
+        {
+            collectSound.Play();
+        }
     }
     /*private void OnApplicationFocus(bool focus)
     {

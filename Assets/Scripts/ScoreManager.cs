@@ -8,6 +8,10 @@ public class ScoreManager : MonoBehaviour
     private int score;
     public TextMeshProUGUI scoreText;
     // Start is called before the first frame update
+    private void Awake()
+    {
+        Time.timeScale = 1f;
+    }
     void Start()
     {
         score = 0;

@@ -61,6 +61,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotateSpeed: 20
+  collectSound: {fileID: 0}
 --- !u!95 &232438128
 Animator:
   serializedVersion: 4
