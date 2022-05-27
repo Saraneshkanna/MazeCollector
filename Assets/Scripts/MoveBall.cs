@@ -20,7 +20,11 @@ public class MoveBall : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Controller = GetComponent<CharacterController>(); 
+        Controller = GetComponent<CharacterController>();
+        if (!PlayerPrefs.HasKey("Sensitivity"))
+        {
+            PlayerPrefs.SetFloat("Sensitivity", 1f);
+        }
     }
 
     // Update is called once per frame
@@ -40,7 +44,7 @@ public class MoveBall : MonoBehaviour
 
         //Vector3 velocity = (transform.forward * PlayerMovementInput.y + transform.right * PlayerMovementInput.x) * MoveSpeed + Vector3.up * yVelocity;
         Vector3 velocity = PlayerMovementInput * MoveSpeed + Vector3.up * yVelocity;
-        Controller.Move(velocity * Time.deltaTime);
+        Controller.Move(velocity * PlayerPrefs.GetFloat("Sensitivity") * Time.deltaTime);
 
         if(Controller.isGrounded)
         {

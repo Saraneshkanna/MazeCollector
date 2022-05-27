@@ -3,9 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class MainMenu : MonoBehaviour
+public class SettingsMenu : MonoBehaviour
 {
-    public GameObject mainMenu;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,18 +17,8 @@ public class MainMenu : MonoBehaviour
         
     }
 
-    public void PlayGame()
+    public void GoBack()
     {
-        SceneManager.LoadScene("GameScene");
-    }
-
-    public void QuitGame()
-    {
-        Application.Quit();
-    }
-
-    public void GoToSettings()
-    {
-        SceneManager.LoadScene("SettingsMenu");
+        SceneManager.LoadScene("MainMenu");
     }
 }
