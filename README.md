@@ -1,1 +1,1 @@
-# MazeController
+# MazeCollector
