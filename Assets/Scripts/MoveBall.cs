@@ -21,10 +21,6 @@ public class MoveBall : MonoBehaviour
     void Start()
     {
         Controller = GetComponent<CharacterController>();
-        if (!PlayerPrefs.HasKey("Sensitivity"))
-        {
-            PlayerPrefs.SetFloat("Sensitivity", 1f);
-        }
     }
 
     // Update is called once per frame
@@ -44,7 +40,7 @@ public class MoveBall : MonoBehaviour
 
         //Vector3 velocity = (transform.forward * PlayerMovementInput.y + transform.right * PlayerMovementInput.x) * MoveSpeed + Vector3.up * yVelocity;
         Vector3 velocity = PlayerMovementInput * MoveSpeed + Vector3.up * yVelocity;
-        Controller.Move(velocity * PlayerPrefs.GetFloat("Sensitivity") * Time.deltaTime);
+        Controller.Move(velocity * Time.deltaTime);
 
         if(Controller.isGrounded)
         {
@@ -64,7 +60,7 @@ public class MoveBall : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "Collectible")
+        if(other.tag == "Coin"|| other.tag =="Ruby")
         {
             collectSound.Play();
         }

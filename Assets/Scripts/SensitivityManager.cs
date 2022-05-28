@@ -7,11 +7,11 @@ public class SensitivityManager : MonoBehaviour
 {
     [SerializeField] Slider sensSlider;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         if (!PlayerPrefs.HasKey("Sensitivity"))
         {
-            PlayerPrefs.SetFloat("Sensitivity", 1f);
+            PlayerPrefs.SetFloat("Sensitivity", 0.5f);
             Load();
         }
         else

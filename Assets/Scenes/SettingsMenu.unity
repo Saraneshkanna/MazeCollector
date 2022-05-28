@@ -1201,7 +1201,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Movement Sensitivity
+  m_text: Camera Sensitivity
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 76db921871f9f06489391146cea060b5, type: 2}
   m_sharedMaterial: {fileID: -2567090898358149913, guid: 76db921871f9f06489391146cea060b5, type: 2}

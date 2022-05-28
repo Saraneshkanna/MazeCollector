@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 5355872699501055279}
   - component: {fileID: 7601177237373400559}
   - component: {fileID: 2017467331473588778}
-  - component: {fileID: 232438128}
+  - component: {fileID: 3240922510845841276}
   m_Layer: 0
   m_Name: Ruby
-  m_TagString: Collectible
+  m_TagString: Ruby
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 4368246988835016343}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1, y: 1, z: 1}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5368432221484797670}
@@ -60,9 +60,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 454863e230e61eb4d876671ea8ca8f1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotateSpeed: 20
-  collectSound: {fileID: 0}
---- !u!95 &232438128
+--- !u!95 &3240922510845841276
 Animator:
   serializedVersion: 4
   m_ObjectHideFlags: 0
@@ -72,7 +70,7 @@ Animator:
   m_GameObject: {fileID: 4368246988835016343}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 468ad8f86ae3e8a4b856edabea520b40, type: 2}
+  m_Controller: {fileID: 9100000, guid: e59fc1a1c5d9dd94c826818d367bda7f, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

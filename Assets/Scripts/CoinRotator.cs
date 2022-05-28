@@ -2,9 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CoinManager : MonoBehaviour
+public class CoinRotator : MonoBehaviour
 {
     // Start is called before the first frame update
+    public float rotateSpeed = 20f;
     void Start()
     {
         
@@ -13,15 +14,6 @@ public class CoinManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-    }
-
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if(other.tag == "Player")
-        {
-            Destroy(this.gameObject);
-        }
+        this.transform.Rotate(rotateSpeed * Time.deltaTime,0,0,Space.Self);
     }
 }
